@@ -1,0 +1,467 @@
+/* gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D2B48C;
+    height: 100vh;
+}
+
+.dm-serif-display-regular {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dm-serif-display-regular-italic {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #f5f5dc;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover,form .btn-enviar input {
+    box-shadow: 0px 0px 8px #c0c0ac;
+    transform: scale(1.05);
+
+}
+
+.btn-contato button.dm-light {
+    font-weight: 300;
+}
+
+h2.titulo{
+    color: #75604a;
+    font-size: 36px;
+    text-align: center;
+
+}
+
+h2.titulo span{
+    color: #f5d7a9 ;
+    
+    
+}
+
+.btn-social button {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 3px;
+    font-size: 30px;
+    color: #654321;
+    background-color: #f5d7a9 ;
+    border: none;
+
+}
+
+/* CABEÇALHO */
+header {
+    padding: 0;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #b49778;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header a:hover {
+    color: #75604a;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header nav ul li:not(:last-child) {
+    border-right: 1px solid #654321; /* Adicionando a divisão "|" entre os itens */
+}
+
+.header-right {
+    margin-left: auto; /* Move os itens à direita */
+}
+
+.btn-contato {
+    margin-left: 20px; /* Adiciona um espaço entre os itens do menu e o botão Contato */
+}
+
+/* TOPO SITE */
+
+section.topo-do-site{
+    padding: 0px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+.topo-do-site h1{
+    color: #654321;
+    font-size: 38px;
+}
+
+.topo-do-site span{
+    color: #f5d7a9;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: #654321;
+    font-size: 20px;
+    margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* ESPECIALIDADES */
+
+section.especialidades{
+    padding: 40px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.especialidades .flex{
+    gap: 60px;
+    justify-content: center;
+}
+
+.especialidades .especialidades-box{
+    color: #654321;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    box-shadow: 0 0 8px transparent;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #654321;
+}
+
+.especialidades .especialidades-box i{
+    font-size: 70px;
+    color: #f5d7a9;
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+
+
+/* ESTILO BIOGRAFIA*/
+
+section.biografia{
+    padding: 40px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.biografia .flex{
+    align-items: center; /*alinhar pelo centro*/
+    gap: 60px; /* respiro entre texto e imagem*/
+}
+
+.biografia .txt-biografia{
+    color: #654321;
+    line-height: 40px ; /*distancia*/
+
+}
+
+.biografia .txt-biografia h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+.biografia .txt-biografia h2 span{
+    color: #f5d7a9 ;
+    display: block; /*linha de baixo*/
+}
+
+.biografia .txt-biografia p{
+    font-size: 20px;
+    margin: 20px 0;
+    line-height: 35px;
+    text-align: justify;
+}
+
+/*ESTILO PORTFOLIO*/
+
+section.portfolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff5d;
+}
+section.portfolio .flex{
+    justify-content: space-around;
+    margin-top: 40px ;
+}
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 5s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #65432136;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #f5d7a9 ;
+    opacity: 0;
+    transition: .5s;
+}
+.overlay:hover{
+    opacity: 1;
+}
+
+/*ESTILO FORMULARIO*/
+
+section.formulario{
+    padding: 60px 4%
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+form input,form textarea{
+    width: 100%;
+    background-color: #65432136 ;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color:aliceblue;
+    font-size: 18px;
+}
+
+form input::placeholder,form textarea::placeholder{
+    color: #f5d7a9;
+}
+
+form textarea{
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center
+
+}
+
+form .btn-enviar input{
+   width: 120px ;
+   background-color: #f5d7a9;
+   color: #654321;
+   font-weight: 700;
+   cursor: pointer;
+   transition: .2s;
+}
+
+/* ESTILO RODAPE */
+
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff5d;
+}
+
+footer .flex{
+    justify-content: space-between;
+
+}
+
+footer .line-footer{
+    padding: 30px 0;
+
+}
+
+footer .line-footer p i{
+    color: #654321;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: #654321 ;
+}
+
+
+/* RESPONSIVO */
+@media screen and (max-width: 1173px){
+
+    /* CLASSES */
+    .flex{
+        flex-direction: column-reverse;
+    }
+
+    h2.titulo{
+        font-size: 34px;
+        line-height: 30px;
+    }
+
+    /* CABEÇALHO */
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+
+    /* TOPO */
+
+    .topo-do-site h1{
+        font-size: 30px;
+    }
+
+    section.topo-do-site{
+        padding: 20px 8;
+    }
+
+    .topo-do-site .img-topo-site{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-left: -15px;
+    }
+    
+    section.topo-do-site .flex{
+        align-items: center;
+        justify-content: center;
+        gap: 90px;
+    }
+
+    /* ESPECIALIDADES */
+
+    section.especialidades{
+        padding: 40px 4%;
+    }
+
+    /* BIOGRAFIA */
+
+    section.biografia{
+        padding: 40px 8%;
+    }
+
+    .biografia .txt-biografia h2{
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .btn-social{
+        text-align: center;
+    }
+
+    .img-biografia img{
+        width: 100%;
+    }
+
+    /* PORT */
+
+    section.portfolio{
+        padding: 80px 8%;
+    }
+
+    .img-port{
+        width: 100%;
+    }
+
+    section.portfolio .flex{
+        gap: 60px;
+    }
+
+    /* RODAPE */
+
+    footer .flex{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer .line-footer{
+        text-align: center;
+    }
+
+}
